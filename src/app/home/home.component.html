@@ -1,0 +1,11 @@
+
+@for (item of arr;track arr) {
+    <a routerLink="prodotti">
+        <p-card [header]="item.titolo" styleClass="card">
+            <ng-template pTemplate="header">
+                <img class="Icona" [src]="item.img">
+            </ng-template>
+         </p-card> 
+    </a>
+  }
+  <a routerLink="prodotti">ciaociaociao</a>

@@ -1,0 +1,12 @@
+::ng-deep .card {
+    width: 21%;
+    margin: 2%;
+    text-align: center;
+    float: inline-start;
+
+}
+
+.Icona {
+    width: 45%;
+    margin: 10% 0 15px 0;
+}
