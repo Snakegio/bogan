@@ -1,1 +1,28 @@
+<div>
+    <p-menubar [model]="items">
+        <ng-template pTemplate="item" let-item let-root="root">
+            <a routerLink="" pRipple class="flex align-items-center p-menuitem-link">
+                <span class="ml-2">{{ item.label }}</span>
+            </a>
+        </ng-template>
+        <p>caociao</p>
+        <ng-template pTemplate="end">
+            <div class="flex align-items-center gap-0">
+                <input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto" />
+            </div>
+        </ng-template>
+    </p-menubar>
+</div>
+<!--<div class="grid px-2">
+    <div class="col-1">
+        <div pRipple class="flex align-items-center p-menuitem-link">home</div>
+    </div>
+    <div class="col-4">
+        <div pRipple class="flex align-items-center p-menuitem-link">contact</div>
+    </div>
+    <div class="col-">
+        <div class="flex align-items-center gap-4"><input type="text" pInputText placeholder="Search" class="w-8rem sm:w-auto" /></div>
+    </div>
+</div>-->
+<br>
 <router-outlet></router-outlet>
