@@ -3,6 +3,17 @@ import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { tap } from 'rxjs';
+
+interface Products{
+  id:number;
+  title:string;
+  img:string;
+  descrizione:string;
+  type: "massa" | "recupero" | "salute" | "performance";
+
+}
 
 @Component({
   selector: 'app-prodotti',
@@ -11,8 +22,10 @@ import { CommonModule } from '@angular/common';
   templateUrl: './prodotti.component.html',
   styleUrl: './prodotti.component.css'
 })
-export class ProdottiComponent {
-  products: DataViewModule[] | undefined;
+export class ProdottiComponent{
+  products?: Products[];
+
+  constructor(private activatedRoute: ActivatedRoute){}
   
   ngOnInit() {
     this.products = [
@@ -101,5 +114,15 @@ export class ProdottiComponent {
         "type": "performance"
       }
     ]
+    //filtare rispetto ad un parametro
+    const sub= this.activatedRoute.queryParams.subscribe(params => {
+      const type = params['type'];
+      console.log(type);
+      if(type)
+        this.filterProducts(type);
+    });
+  }
+  filterProducts(type: "massa" | "recupero" | "salute" | "performance") {
+    this.products = this.products?.filter(product => product.type === type);
   }
 }

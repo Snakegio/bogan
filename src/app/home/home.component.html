@@ -1,6 +1,6 @@
 
 @for (item of arr;track arr) {
-    <a routerLink="prodotti">
+    <a routerLink="prodotti" [queryParams]="{type: item.type}"> 
         <p-card [header]="item.titolo" styleClass="card">
             <ng-template pTemplate="header">
                 <img class="Icona" [src]="item.img">
