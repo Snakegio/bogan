@@ -21,9 +21,11 @@ export class AppComponent implements OnInit {
         this.items = [
             {
                 label: 'Home',
+                routerLink: ['']
             },
             {
-                label: 'Contact',
+                label: 'Prodotti',
+                routerLink: ['prodotti']
             }
         ];
     }

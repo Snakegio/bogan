@@ -1,7 +1,7 @@
 <div>
     <p-menubar [model]="items">
         <ng-template pTemplate="item" let-item let-root="root">
-            <a routerLink="" pRipple class="flex align-items-center p-menuitem-link">
+            <a routerLink="{{ item.routerLink}}" pRipple class="flex align-items-center p-menuitem-link">
                 <span class="ml-2">{{ item.label }}</span>
             </a>
         </ng-template>
