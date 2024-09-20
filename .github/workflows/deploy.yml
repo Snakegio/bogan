@@ -28,4 +28,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages # Branch su cui fare il deploy
-          folder: dist      # Cartella generata dalla build
+          folder: dist/bogan/browser      # Cartella generata dalla build
