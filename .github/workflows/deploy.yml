@@ -15,10 +15,9 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 20
+          node-version: 18
 
       - name: Build Angular app to prod
-        working-directory: github-option-three-app
         run: npm install && npm run build:prod
 
       - name: Deploy to GitHub Pages
