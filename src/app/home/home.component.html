@@ -1,9 +1,10 @@
-<div class="flex flex-wrap gap-6 sm:gap-4 sm:justify-content-evenly justify-content-center sm:px-6">  
-    @for (item of arr; track item) {
-          <p-card [header]="item.titolo" styleClass="card w-11rem sm:w-20rem text-center"  routerLink="prodotti" [queryParams]="{type: item.type}">
-            <ng-template pTemplate="header">
-              <img class="Icona max-w-10rem max-h-10rem sm:m-5" [src]="item.img">
-            </ng-template>
-          </p-card>    
-    }
+<div class="flex flex-wrap gap-6 sm:gap-4 sm:justify-content-evenly justify-content-center sm:px-6">
+  @for (item of arr; track item) {
+    <p-card [header]="item.titolo" styleClass="card w-11rem sm:w-20rem text-center cursor-pointer" routerLink="prodotti"
+            [queryParams]="{type: item.type}">
+      <ng-template pTemplate="header">
+        <img class="Icona max-w-10rem max-h-10rem sm:m-5" [src]="item.img" alt="Icona">
+      </ng-template>
+    </p-card>
+  }
 </div>
