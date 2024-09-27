@@ -4,7 +4,6 @@ import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
-import { tap } from 'rxjs';
 
 interface Products{
   id:number;
