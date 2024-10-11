@@ -26,8 +26,15 @@ export class AppComponent implements OnInit {
             {
                 label: 'Prodotti',
                 routerLink: ['prodotti']
+            },
+            {
+                label: 'Carosello',
+                routerLink:['carosello']
             }
         ];
+
+
+        
     }
 }
 

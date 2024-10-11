@@ -1,0 +1,5 @@
+.card img {
+    width: 100%; /* o una dimensione specifica, come 300px */
+    height: 200px; /* dimensione fissa per l'altezza */
+    object-fit: contain; /* per mantenere il rapporto d'aspetto */
+}

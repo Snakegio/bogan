@@ -1,0 +1,28 @@
+
+
+@if(products){
+<div class="card">
+    <p-carousel 
+        [value]="products"
+        [numVisible]="3" 
+        [numScroll]="3" 
+        [circular]="false" 
+        [responsiveOptions]="responsiveOptions">
+            <ng-template let-product pTemplate="item">
+                <div class="border-1 m-5  surface-border border-round m-2 p-3">
+                    <div class="mb-3">
+                        <div class="relative ">
+                            <img 
+                            [src]="product.img" />
+                            <p-tag [value]="product.type"  [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />
+                        </div>
+                    </div>
+                    <div class="mb-3 ">
+                        {{ product.title }}
+                    </div>
+                    
+                </div>
+            </ng-template>
+    </p-carousel>
+</div>
+}
