@@ -5,6 +5,7 @@ import { TagModule } from 'primeng/tag';
 import { ActivatedRoute } from '@angular/router';
 import { Injectable } from '@angular/core';
 import { DeviceDetectorService } from 'ngx-device-detector';
+import { RouterOutlet,RouterLink } from '@angular/router';
 
 interface Products{
   id:number;
@@ -21,13 +22,14 @@ interface Products{
 @Component({
   selector: 'app-carosello',
   standalone: true,
-  imports: [CarouselModule, ButtonModule, TagModule],
+  imports: [CarouselModule, ButtonModule, TagModule,RouterOutlet,RouterLink],
   templateUrl: './carosello.component.html',
   styleUrl: './carosello.component.css'
 })
 export class CarouselCircularDemo implements OnInit{
+  Titolo = ["Massa", "Salute", "Recupero", "Performance"];
   products: Products[]= [];
-
+  isBold:boolean=false;
   responsiveOptions: any[] | undefined;
 
   constructor(private activatedRoute: ActivatedRoute,private deviceService: DeviceDetectorService){}

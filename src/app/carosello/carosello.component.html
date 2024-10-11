@@ -6,20 +6,21 @@
     [numScroll]="1" 
     [circular]="true"
     [showIndicators]=!isMobile()
-    [responsiveOptions]="responsiveOptions" 
-    autoplayInterval="3000">
+    [responsiveOptions]="responsiveOptions" >
         <ng-template let-product pTemplate="item">
-                <div class="border-1 surface-border border-round m-2 p-3 ">
+                <div class="border-1 surface-border border-round m-2 p-3 text-center">
                     <div class="mb-3">
                         <div class="relative mx-auto h-16rem">
-                            <img 
+                            <a routerLink="prodotti" [queryParams]="{type: product.type}" class="text-500 hover:text-700 no-underline"><img 
                                 [src] ="product.img"
                                 [alt]="product.tile" 
                                 class="w-full border-round h-14rem w-13rem" />
+                            </a>
                         </div>
                     </div>
-                    <div class="mb-3 font-medium">
-                        {{ product.title }}
+                    <div class="mb-3 font-medium text-sm">
+                        <span class="font-bold text-lg">{{ product.title }}</span>
+                        <a routerLink="prodotti" [queryParams]="{type: product.type}" class="text-500 hover:text-700 no-underline" ><span> - {{ product.type}}</span></a>
                     </div>
                     <div class="flex justify-content-center align-items-center">
                         <span>
@@ -29,4 +30,8 @@
                 </div>
         </ng-template>
 </p-carousel>
+<!--
+idea di ngclass per fuonzione hover a mano
+<div class="font-italic" [ngClass]="isBold === true ? 'text-green-500': 'text-red-500'" (mouseenter)="isBold=true;" (mouseleave)="isBold=false"> tttttt</div>
+-->
 }
