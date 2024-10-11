@@ -3,6 +3,8 @@ import { CarouselModule } from 'primeng/carousel';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { ActivatedRoute } from '@angular/router';
+import { Injectable } from '@angular/core';
+import { DeviceDetectorService } from 'ngx-device-detector';
 
 interface Products{
   id:number;
@@ -13,6 +15,9 @@ interface Products{
 
 }
 
+@Injectable({
+  providedIn: 'root'
+})
 @Component({
   selector: 'app-carosello',
   standalone: true,
@@ -25,8 +30,11 @@ export class CarouselCircularDemo implements OnInit{
 
   responsiveOptions: any[] | undefined;
 
-  constructor(private activatedRoute: ActivatedRoute){}
+  constructor(private activatedRoute: ActivatedRoute,private deviceService: DeviceDetectorService){}
 
+  isMobile(): boolean {
+    return this.deviceService.isMobile();
+  }
   ngOnInit() {
       this.products = [
         {
@@ -113,6 +121,23 @@ export class CarouselCircularDemo implements OnInit{
           "descrizione": "Migliora la circolazione sanguigna e la vasodilatazione.",
           "type": "performance"
         }
-      ]
+      ],
+      this.responsiveOptions = [
+        {
+            breakpoint: '1199px',
+            numVisible: 1,
+            numScroll: 1,
+        },
+        {
+            breakpoint: '991px',
+            numVisible: 2,
+            numScroll: 2,
+        },
+        {
+            breakpoint: '767px',
+            numVisible: 1,
+            numScroll: 1,
+        }
+    ];
     }
   }
