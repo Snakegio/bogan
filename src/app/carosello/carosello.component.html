@@ -2,29 +2,25 @@
 <p-carousel 
     [value]="products" 
     [numVisible]="3" 
-    [numScroll]="1" 
+    [numScroll]="3" 
     [responsiveOptions]="responsiveOptions">
         <ng-template let-product pTemplate="item">
             <div class="border-1 surface-border border-round m-2 p-3">
                 <div class="mb-3">
-                    <div class="relative mx-auto">
+                    <div class="relative mx-auto ">
                         <img 
-                            src="https://primefaces.org/cdn/primeng/images/demo/product/{{ product.image }}" 
-                            [alt]="product.name" 
-                            class="w-full border-round" />
-                        <p-tag 
-                            [value]="product.inventoryStatus" 
-                            [severity]="getSeverity(product.inventoryStatus)" 
-                            class="absolute" 
-                            [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />
+                            [src]="product.img"
+                             
+                            class="w-full border-round max-w-10rem max-h-10rem sm:m-5 " />
+                        
                     </div>
                 </div>
                 <div class="mb-3 font-medium">
-                    {{ product.name }}
+                    {{ product.type }}
                 </div>
                 <div class="flex justify-content-between align-items-center">
                     <div class="mt-0 font-semibold text-xl">
-                        {{ '$' + product.price }}
+                        {{product.title }}
                     </div>
                     <span>
                         <p-button icon="pi pi-heart" severity="secondary" [outlined]="true" />
