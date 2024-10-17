@@ -32,6 +32,8 @@ export class CarouselCircularDemo implements OnInit{
   products: Products[]= [];
   isBold:boolean=false;
   responsiveOptions: any[] | undefined;
+  visibleProductsCount = 9;
+  displayedProducts: any[]= [];
 
   constructor(private activatedRoute: ActivatedRoute,private deviceService: DeviceDetectorService, private http:HttpClient){}
 
@@ -42,6 +44,7 @@ export class CarouselCircularDemo implements OnInit{
       this.http.get<Products[]>("assets/data/products.json")
       .subscribe(value=> {
         this.products = value;
+        this.updateDisplayedProducts();
       }),
       this.responsiveOptions = [
         {
@@ -60,5 +63,9 @@ export class CarouselCircularDemo implements OnInit{
             numScroll: 1,
         }
     ];
+    }
+
+    updateDisplayedProducts() {
+      this.displayedProducts = this.products.slice(0, this.visibleProductsCount);
     }
   }
