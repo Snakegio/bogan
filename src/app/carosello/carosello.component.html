@@ -1,7 +1,7 @@
 <br><br>
 @if (products) {
 <p-carousel 
-    [value]= "displayedProducts"
+    [value]="products" 
     [numVisible]="4" 
     [numScroll]="1" 
     [circular]="true"
@@ -11,7 +11,7 @@
                 <div class="border-1 surface-border border-round m-2 p-3 text-center">
                     <div class="mb-3">
                         <div class="relative mx-auto h-16rem">
-                            <a routerLink="prodotti" [queryParams]="{type: product.type}" class="text-500 hover:text-700 no-underline"><img 
+                            <a routerLink="schede" [queryParams]="{type: product.type}" class="text-500 hover:text-700 no-underline"><img 
                                 [src] ="product.img"
                                 [alt]="product.tile" 
                                 class="w-full border-round h-14rem w-13rem" />
@@ -20,11 +20,11 @@
                     </div>
                     <div class="mb-3 font-medium text-sm">
                         <span class="font-bold text-lg">{{ product.title }}</span>
-                        <a routerLink="prodotti" [queryParams]="{type: product.type}" class="text-500 hover:text-700 no-underline" ><span> - {{ product.type}}</span></a>
+                        <a routerLink="schede" [queryParams]="{type: product.type}" class="text-500 hover:text-700 no-underline" ><span> - {{ product.type}}</span></a>
                     </div>
                     <div class="flex justify-content-center align-items-center">
                         <span>
-                            <p-button icon="pi pi-question-circle" class="flex-auto md:flex-initial white-space-nowrap" label="More info" />
+                            <p-button icon="pi pi-question-circle" class="flex-auto md:flex-initial white-space-nowrap" label="More info" routerLink="schede" [queryParams]="{type: product.type}"/>
                         </span>
                     </div>
                 </div>

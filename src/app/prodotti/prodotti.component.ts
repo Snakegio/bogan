@@ -4,6 +4,8 @@ import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { SchedaprodComponent } from "../schedaprod/schedaprod.component";
+import { RouterModule } from '@angular/router';
 
 interface Products{
   id:number;
@@ -17,7 +19,7 @@ interface Products{
 @Component({
   selector: 'app-prodotti',
   standalone: true,
-  imports: [DataViewModule, ButtonModule, TagModule, CommonModule],
+  imports: [DataViewModule, ButtonModule, TagModule, CommonModule, SchedaprodComponent,RouterModule ],
   templateUrl: './prodotti.component.html',
   styleUrl: './prodotti.component.css'
 })
