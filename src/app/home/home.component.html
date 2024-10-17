@@ -1,3 +1,5 @@
+
+
 <div class="flex flex-wrap gap-6 sm:gap-4 sm:justify-content-evenly justify-content-center sm:px-6">
     @for (item of arr; track arr) {
         <p-card [header]="item.titolo" styleClass="card w-11rem sm:w-20rem text-center" routerLink="prodotti" [queryParams]="{type: item.type}" class="grid-item">
@@ -6,5 +8,8 @@
           </ng-template>
         </p-card>
     }
+    
 </div>
+
 <app-carosello></app-carosello>
+

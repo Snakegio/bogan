@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { RouterOutlet,RouterLink } from '@angular/router';
 import { CardModule } from 'primeng/card';
 import { CarouselCircularDemo } from "../carosello/carosello.component";
+import { PProdottoComponent } from "../p-prodotto/p-prodotto.component";
+
 
 interface Box{
   id:number,
@@ -13,7 +15,7 @@ interface Box{
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardModule, RouterOutlet, RouterLink, CarouselCircularDemo],
+  imports: [CardModule, RouterOutlet, RouterLink, CarouselCircularDemo, PProdottoComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
