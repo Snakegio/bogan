@@ -1,0 +1,35 @@
+<div class="grid nested-grid ">
+    <div class="col-12 md:col-6 lg:col-4">
+        <div class="text-center p-3 border-round-sm ">
+            <img 
+            [src]="product?.img" 
+            [alt]="product?.title"
+            class="max-h-22rem sm:max-h-30rem	">
+        </div>
+    </div>
+    <div class="col-12 md:col-8 sm:pt-7">
+        <div class="grid">
+            <div class="col-12 md:col-6">
+                <div class="text-center text-4xl font-semibold sm:text-6xl sm:font-bold">{{product?.title}}</div>
+            </div>
+            <div class="col-12 md:col-4">
+                <br>
+                <div class="text-center font-italic sm:text-left sm:vertical-align-bottom hover">
+                    <a routerLink="../prodotti" [queryParams]="{type: product?.type}" class="text-500 hover:text-700 no-underline" >
+                        <span> 
+                            - {{ product?.type}}
+                        </span>
+                    </a>
+                </div>
+            </div>
+            <div class="col-12 px-3 sm:px-8 sm:p-3">
+                <div class="text-center text-lg sm:text-2xl">{{product?.descrizione}}</div>
+            </div>
+            <div class="col-12 text-center">
+                <a [href]="product?.fonte" target="_blank">
+                    <p-button class="text-center" icon="pi pi-search" [outlined]="true" label="Fonti"/>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

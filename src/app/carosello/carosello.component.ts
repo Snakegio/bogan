@@ -13,6 +13,7 @@ interface Products{
   title:string;
   img:string;
   descrizione:string;
+  fonte:string;
   type: "massa" | "recupero" | "salute" | "performance";
 
 }

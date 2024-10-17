@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DataViewModule } from 'primeng/dataview';
 import { ButtonModule } from 'primeng/button';
 import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { RouterOutlet,RouterLink } from '@angular/router';
+import { RouterModule } from '@angular/router';
 
 interface Products{
   id:number;
@@ -17,12 +19,12 @@ interface Products{
 @Component({
   selector: 'app-prodotti',
   standalone: true,
-  imports: [DataViewModule, ButtonModule, TagModule, CommonModule],
+  imports: [DataViewModule, ButtonModule, TagModule, CommonModule,RouterOutlet,RouterLink,RouterModule],
   templateUrl: './prodotti.component.html',
   styleUrl: './prodotti.component.css'
 })
-export class ProdottiComponent{
-  products?: Products[];
+export class ProdottiComponent implements OnInit{
+  products: Products[]= [];
 
   constructor(private activatedRoute: ActivatedRoute){}
   

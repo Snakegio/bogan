@@ -1,86 +1,98 @@
 [
     {
-      "id": 1,
-      "title": "Proteine del Siero",
-      "img": "../../../assets/foto/001proteineinpolvere.jpg",
-      "descrizione": "Aumenta la sintesi proteica per lo sviluppo muscolare.",
-      "type": "massa"
+        "id": 1,
+        "title": "Proteine del Siero",
+        "img": "../../../assets/foto/001proteineinpolvere.jpg",
+        "descrizione": "Aumenta la sintesi proteica, fondamentale per lo sviluppo muscolare. Ottimo post-allenamento, contribuisce a una rapida riparazione dei tessuti muscolari.",
+        "type": "massa",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=protein+supplementation"
     },
     {
-      "id": 2,
-      "title": "BCAA",
-      "img": "../../../assets/foto/002bcaa.jpg",
-      "descrizione": "Favorisce il recupero muscolare post-allenamento.",
-      "type": "recupero"
+        "id": 2,
+        "title": "BCAA",
+        "img": "../../../assets/foto/002bcaa.jpg",
+        "descrizione": "Favorisce il recupero muscolare post-allenamento, riducendo l'affaticamento e migliorando la sintesi proteica. Ideale per gli sportivi che desiderano massimizzare le performance.",
+        "type": "recupero",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=BCAA"
     },
     {
-      "id": 3,
-      "title": "Creatina Monoidrato",
-      "img": "../../../assets/foto/003creatina.jpg",
-      "descrizione": "Migliora la forza e la performance durante l'allenamento.",
-      "type": "performance"
+        "id": 3,
+        "title": "Creatina Monoidrato",
+        "img": "../../../assets/foto/003creatina.jpg",
+        "descrizione": "Migliora la forza e la performance durante l'allenamento, fornendo energia rapida ai muscoli. Perfetta per chi cerca di aumentare l'intensità degli allenamenti.",
+        "type": "performance",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=creatine+monohydrate"
     },
     {
-      "id": 4,
-      "title": "Omega 3",
-      "img": "../../../assets/foto/004omega3.jpg",
-      "descrizione": "Supporta la salute cardiovascolare e riduce le infiammazioni.",
-      "type": "salute"
+        "id": 4,
+        "title": "Omega 3",
+        "img": "../../../assets/foto/004omega3.jpg",
+        "descrizione": "Supporta la salute cardiovascolare e riduce le infiammazioni, contribuendo al benessere generale. Essenziale per chi pratica sport e desidera mantenere il corpo in equilibrio.",
+        "type": "salute",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=omega+3+fatty+acids"
     },
     {
-      "id": 5,
-      "title": "Glutammina",
-      "img": "../../../assets/foto/005glutamina.jpg",
-      "descrizione": "Aiuta il recupero muscolare e riduce l'affaticamento.",
-      "type": "recupero"
+        "id": 5,
+        "title": "Glutammina",
+        "img": "../../../assets/foto/005glutamina.jpg",
+        "descrizione": "Aiuta il recupero muscolare e riduce l'affaticamento, favorendo la riparazione dei tessuti. Ottima per gli atleti che desiderano un recupero più rapido.",
+        "type": "recupero",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=glutamine"
     },
     {
-      "id": 6,
-      "title": "Gainer",
-      "img": "../../../assets/foto/006massgainer.jpg",
-      "descrizione": "Aumenta l'apporto calorico per favorire la crescita muscolare.",
-      "type": "massa"
+        "id": 6,
+        "title": "Gainer",
+        "img": "../../../assets/foto/006massgainer.jpg",
+        "descrizione": "Aumenta l'apporto calorico per favorire la crescita muscolare, fornendo nutrienti essenziali. Ideale per chi ha difficoltà a guadagnare peso muscolare.",
+        "type": "massa",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=weight+gainer"
     },
     {
-      "id": 7,
-      "title": "L-Carnitina",
-      "img": "../../../assets/foto/007carnitina.jpg",
-      "descrizione": "Favorisce l'utilizzo dei grassi come fonte di energia.",
-      "type": "performance"
+        "id": 7,
+        "title": "L-Carnitina",
+        "img": "../../../assets/foto/007carnitina.jpg",
+        "descrizione": "Favorisce l'utilizzo dei grassi come fonte di energia, supportando la perdita di peso. Utile per migliorare la resistenza e l'efficienza durante gli allenamenti.",
+        "type": "performance",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=L-carnitine"
     },
     {
-      "id": 8,
-      "title": "Multivitaminico",
-      "img": "../../../assets/foto/008multivitaminico.jpg",
-      "descrizione": "Supporta il benessere generale e migliora le difese immunitarie.",
-      "type": "salute"
+        "id": 8,
+        "title": "Multivitaminico",
+        "img": "../../../assets/foto/008multivitaminico.jpg",
+        "descrizione": "Supporta il benessere generale, fornendo vitamine e minerali essenziali. Aiuta a migliorare le difese immunitarie e a mantenere energia durante il giorno.",
+        "type": "salute",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=multivitamin"
     },
     {
-      "id": 9,
-      "title": "Caffeina Anidra",
-      "img": "../../../assets/foto/009caffeina.jpg",
-      "descrizione": "Aumenta la vigilanza e la resistenza durante gli allenamenti.",
-      "type": "performance"
+        "id": 9,
+        "title": "Caffeina Anidra",
+        "img": "../../../assets/foto/009caffeina.jpg",
+        "descrizione": "Aumenta la vigilanza e la resistenza durante gli allenamenti, migliorando le performance. Perfetta per chi cerca di ottimizzare l'energia prima di ogni sessione.",
+        "type": "performance",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=anhydrous+caffeine"
     },
     {
-      "id": 10,
-      "title": "ZMA",
-      "img": "../../../assets/foto/010zma.jpg",
-      "descrizione": "Supporta il recupero notturno e migliora la qualità del sonno.",
-      "type": "recupero"
+        "id": 10,
+        "title": "ZMA",
+        "img": "../../../assets/foto/010zma.jpg",
+        "descrizione": "Supporta il recupero notturno e migliora la qualità del sonno, favorendo una maggiore rigenerazione muscolare. Utile per chi si allena intensamente e desidera riposare meglio.",
+        "type": "recupero",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=ZMA"
     },
     {
-      "id": 11,
-      "title": "Vitamina D3",
-      "img": "../../../assets/foto/011vitaminad3.jpg",
-      "descrizione": "Aiuta a rafforzare le ossa e il sistema immunitario.",
-      "type": "salute"
+        "id": 11,
+        "title": "Vitamina D3",
+        "img": "../../../assets/foto/011vitaminad3.jpg",
+        "descrizione": "Aiuta a rafforzare le ossa e il sistema immunitario, essenziale per il benessere generale. Importante per chi pratica sport all'aperto e desidera mantenere elevati livelli di energia.",
+        "type": "salute",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=vitamin+D3"
     },
     {
-      "id": 12,
-      "title": "Arginina",
-      "img": "../../../assets/foto/012arginina.jpg",
-      "descrizione": "Migliora la circolazione sanguigna e la vasodilatazione.",
-      "type": "performance"
+        "id": 12,
+        "title": "Arginina",
+        "img": "../../../assets/foto/012arginina.jpg",
+        "descrizione": "Migliora la circolazione sanguigna e la vasodilatazione, supportando le performance atletiche. Ottima per chi cerca di aumentare la resistenza e l’efficacia durante l'allenamento.",
+        "type": "performance",
+        "fonte": "https://pubmed.ncbi.nlm.nih.gov/?term=arginine"
     }
-  ]
+]
