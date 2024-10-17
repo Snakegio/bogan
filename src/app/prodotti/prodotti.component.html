@@ -23,7 +23,7 @@
                             <div class="flex flex-column md:align-items-end gap-5">
                                 <div class="flex flex-row-reverse md:flex-row gap-2">
                                     <p-button icon="pi pi-heart" [outlined]="true" />
-                                    <p-button icon="pi pi-question-circle" class="flex-auto md:flex-initial white-space-nowrap" label="More info" />
+                                    <p-button routerLink="../prodotto" [queryParams]="{id: item.id}" icon="pi pi-question-circle" class="flex-auto md:flex-initial white-space-nowrap" label="More info"/>
                                 </div>
                             </div>
                         </div>

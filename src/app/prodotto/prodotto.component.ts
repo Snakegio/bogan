@@ -1,31 +1,34 @@
-import { Component } from '@angular/core';
-import { DataViewModule } from 'primeng/dataview';
-import { ButtonModule } from 'primeng/button';
-import { TagModule } from 'primeng/tag';
 import { CommonModule } from '@angular/common';
+import { Component, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, RouterModule } from '@angular/router';
+import { RatingModule } from 'primeng/rating';
 
-interface Products{
-  id:number;
-  title:string;
-  img:string;
-  descrizione:string;
+
+interface Products {
+  id: number;
+  title: string;
+  img: string;
+  descrizione: string;
   type: "massa" | "recupero" | "salute" | "performance";
 
 }
 
 @Component({
-  selector: 'app-prodotti',
+  selector: 'app-prodotto',
   standalone: true,
-  imports: [DataViewModule, ButtonModule, TagModule, CommonModule,RouterModule],
-  templateUrl: './prodotti.component.html',
-  styleUrl: './prodotti.component.css'
+  imports: [CommonModule, FormsModule, RatingModule, RouterModule],
+  templateUrl: './prodotto.component.html',
+  styleUrl: './prodotto.component.css'
 })
-export class ProdottiComponent{
+export class ProdottoComponent implements OnInit {
+  value = 5;
+  id: number | undefined;
   products?: Products[];
+  product?: Products;
 
-  constructor(private activatedRoute: ActivatedRoute){}
-  
+  constructor(private activatedRoute: ActivatedRoute) { }
+
   ngOnInit() {
     this.products = [
       {
@@ -112,16 +115,16 @@ export class ProdottiComponent{
         "descrizione": "Migliora la circolazione sanguigna e la vasodilatazione.",
         "type": "performance"
       }
-    ]
-    //filtare rispetto ad un parametro
-    const sub= this.activatedRoute.queryParams.subscribe(params => {
-      const type = params['type'];
-      console.log(type);
-      if(type)
-        this.filterProducts(type);
+    ];
+    this.activatedRoute.queryParams.subscribe(params => {
+      this.id = params['id'];
+      this.filterProducts();
     });
   }
-  filterProducts(type: "massa" | "recupero" | "salute" | "performance") {
-    this.products = this.products?.filter(product => product.type === type);
+
+  filterProducts() {
+    this.product = this.products?.find(product => product.id == this.id);
   }
+
+
 }
